@@ -8,6 +8,10 @@ const meta = {
   component: Modal,
   parameters: { layout: 'centered' },
   tags: ['autodocs'],
+  argTypes: {
+    children: { control: false },
+    style: { control: false },
+  },
 } satisfies Meta<typeof Modal>;
 
 export default meta;

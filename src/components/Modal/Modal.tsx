@@ -4,11 +4,17 @@ import { createPortal } from 'react-dom';
 import styles from './Modal.module.css';
 
 export interface ModalProps {
+  /** Whether the modal is currently open */
   isOpen: boolean;
+  /** Callback fired when the modal requests to be closed */
   onClose: () => void;
+  /** The title of the modal, announced to screen readers */
   title?: string;
+  /** Whether clicking the backdrop closes the modal */
   closeOnOverlayClick?: boolean;
+  /** Whether pressing Escape closes the modal */
   closeOnEsc?: boolean;
+  /** The modal content (typically Header, Body, Footer) */
   children: React.ReactNode;
 }
 

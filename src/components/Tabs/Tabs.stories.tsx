@@ -6,6 +6,10 @@ const meta = {
   component: Tabs,
   parameters: { layout: 'centered' },
   tags: ['autodocs'],
+  argTypes: {
+    children: { control: false },
+    style: { control: false },
+  },
 } satisfies Meta<typeof Tabs>;
 
 export default meta;

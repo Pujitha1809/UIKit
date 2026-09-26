@@ -11,6 +11,8 @@ const meta = {
   argTypes: {
     variant: { control: 'select', options: ['elevated', 'outlined', 'flat'] },
     isHoverable: { control: 'boolean' },
+    children: { control: false },
+    style: { control: false },
   },
 } satisfies Meta<typeof Card>;
 

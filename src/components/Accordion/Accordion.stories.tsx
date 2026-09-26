@@ -6,6 +6,10 @@ const meta = {
   component: Accordion,
   parameters: { layout: 'centered' },
   tags: ['autodocs'],
+  argTypes: {
+    children: { control: false },
+    style: { control: false },
+  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;

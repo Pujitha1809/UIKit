@@ -2,8 +2,11 @@ import React from 'react';
 import styles from './Badge.module.css';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+  /** The visual intent variant of the badge */
   variant?: 'default' | 'success' | 'warning' | 'danger';
+  /** The sizing of the badge */
   size?: 'sm' | 'md';
+  /** Display a solid dot indicator alongside the text */
   dot?: boolean;
 }
 

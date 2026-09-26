@@ -2,10 +2,15 @@ import React from 'react';
 import styles from './Button.module.css';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** The visual style variant of the button */
   variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
+  /** The size of the button */
   size?: 'sm' | 'md' | 'lg';
+  /** Displays a loading spinner and disables the button */
   isLoading?: boolean;
+  /** Icon to display on the left side of the button text */
   leftIcon?: React.ReactNode;
+  /** Icon to display on the right side of the button text */
   rightIcon?: React.ReactNode;
 }
 

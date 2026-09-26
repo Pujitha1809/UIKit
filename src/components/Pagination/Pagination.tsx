@@ -2,10 +2,15 @@ import React from 'react';
 import styles from './Pagination.module.css';
 
 export interface PaginationProps extends React.HTMLAttributes<HTMLElement> {
+  /** The currently active page (1-indexed) */
   currentPage: number;
+  /** The total number of pages */
   totalPages: number;
+  /** Callback fired when a page button is clicked */
   onPageChange: (page: number) => void;
+  /** Number of sibling pages to show on each side of the active page */
   siblingCount?: number;
+  /** Whether to show Previous/Next navigation buttons */
   showPrevNext?: boolean;
 }
 

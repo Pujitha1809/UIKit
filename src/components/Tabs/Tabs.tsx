@@ -18,9 +18,13 @@ function useTabsContext() {
 }
 
 export interface TabsProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'defaultValue'> {
+  /** The controlled value of the active tab */
   value?: string;
+  /** The uncontrolled default active tab */
   defaultValue?: string;
+  /** Callback fired when the active tab changes */
   onValueChange?: (value: string) => void;
+  /** The visual and interaction orientation of the tabs */
   orientation?: 'horizontal' | 'vertical';
 }
 

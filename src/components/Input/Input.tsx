@@ -2,11 +2,17 @@ import React, { useId } from 'react';
 import styles from './Input.module.css';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  /** The text label for the input field */
   label?: string;
+  /** Descriptive text placed below the input */
   helperText?: string;
+  /** Error message to display, overrides helperText and marks input as invalid */
   errorMessage?: string;
+  /** Force the input into an invalid styling state */
   isInvalid?: boolean;
+  /** Element (e.g. icon) to place inside the left of the input */
   leftAddon?: React.ReactNode;
+  /** Element (e.g. icon) to place inside the right of the input */
   rightAddon?: React.ReactNode;
 }
 

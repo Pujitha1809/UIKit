@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './Card.module.css';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** The visual elevation style of the card */
   variant?: 'elevated' | 'outlined' | 'flat';
+  /** Applies a hover state styling */
   isHoverable?: boolean;
 }
 
