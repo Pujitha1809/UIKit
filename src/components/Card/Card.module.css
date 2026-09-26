@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--uk-color-surface);
+  border-radius: var(--uk-radius-lg);
+  font-family: var(--uk-font-family-base);
+  color: var(--uk-color-text-primary);
+  overflow: hidden;
+  transition: box-shadow var(--uk-transition-fast), transform var(--uk-transition-fast);
+}
+
+/* Variants */
+.elevated {
+  box-shadow: var(--uk-shadow-md);
+  border: 1px solid transparent;
+}
+
+.outlined {
+  border: 1px solid var(--uk-color-border);
+  box-shadow: none;
+}
+
+.flat {
+  background-color: var(--uk-color-bg-subtle);
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* Hoverable modifier */
+.hoverable:hover {
+  transform: translateY(-2px);
+}
+.elevated.hoverable:hover {
+  box-shadow: var(--uk-shadow-lg);
+}
+.outlined.hoverable:hover {
+  box-shadow: var(--uk-shadow-sm);
+}
+
+/* Subcomponents */
+.header {
+  padding: var(--uk-spacing-4);
+  border-bottom: 1px solid var(--uk-color-border);
+  font-weight: var(--uk-font-weight-semibold);
+  font-size: var(--uk-font-size-lg);
+}
+
+.body {
+  padding: var(--uk-spacing-4);
+  flex: 1;
+}
+
+.footer {
+  padding: var(--uk-spacing-4);
+  background-color: var(--uk-color-bg-subtle);
+  border-top: 1px solid var(--uk-color-border);
+}

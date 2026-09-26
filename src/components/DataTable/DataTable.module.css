@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+  font-family: var(--uk-font-family-base);
+  border: 1px solid var(--uk-color-border);
+  border-radius: var(--uk-radius-lg);
+  background-color: var(--uk-color-surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.th {
+  padding: var(--uk-spacing-3) var(--uk-spacing-4);
+  font-size: var(--uk-font-size-sm);
+  font-weight: var(--uk-font-weight-semibold);
+  color: var(--uk-color-text-secondary);
+  border-bottom: 2px solid var(--uk-color-border);
+  background-color: var(--uk-color-bg-subtle);
+  user-select: none;
+}
+
+.sticky .th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.th.sortable {
+  cursor: pointer;
+  transition: background-color var(--uk-transition-fast), color var(--uk-transition-fast);
+}
+
+.th.sortable:hover {
+  background-color: var(--uk-color-border);
+  color: var(--uk-color-text-primary);
+}
+
+.thContent {
+  display: flex;
+  align-items: center;
+  gap: var(--uk-spacing-2);
+}
+
+.sortIcon {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.th[aria-sort="ascending"] .sortIcon,
+.th[aria-sort="descending"] .sortIcon {
+  opacity: 1;
+  color: var(--uk-color-primary-600);
+}
+
+.td {
+  padding: var(--uk-spacing-3) var(--uk-spacing-4);
+  font-size: var(--uk-font-size-md);
+  color: var(--uk-color-text-primary);
+  border-bottom: 1px solid var(--uk-color-border);
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.tr.clickable {
+  cursor: pointer;
+  transition: background-color var(--uk-transition-fast);
+}
+
+.tr.clickable:hover {
+  background-color: var(--uk-color-bg-subtle);
+}
+
+.empty {
+  padding: var(--uk-spacing-8);
+  text-align: center;
+  color: var(--uk-color-text-secondary);
+  font-size: var(--uk-font-size-md);
+}

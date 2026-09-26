@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--uk-spacing-1);
+  font-family: var(--uk-font-family-base);
+  position: relative;
+}
+
+.label {
+  font-size: var(--uk-font-size-sm);
+  font-weight: var(--uk-font-weight-medium);
+  color: var(--uk-color-text-primary);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--uk-spacing-2) var(--uk-spacing-3);
+  font-size: var(--uk-font-size-md);
+  color: var(--uk-color-text-primary);
+  background-color: var(--uk-color-bg);
+  border: 1px solid var(--uk-color-border);
+  border-radius: var(--uk-radius-md);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--uk-transition-fast);
+  text-align: left;
+  min-height: 2.5rem;
+}
+
+.trigger:focus-visible {
+  border-color: var(--uk-color-primary-500);
+  box-shadow: 0 0 0 2px var(--uk-color-primary-100);
+}
+
+.trigger.error {
+  border-color: var(--uk-color-danger-500);
+}
+
+.trigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.triggerValue {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: var(--uk-color-text-secondary);
+}
+
+.icon {
+  font-size: 0.75rem;
+  color: var(--uk-color-text-secondary);
+}
+
+.listbox {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: var(--uk-color-surface);
+  border: 1px solid var(--uk-color-border);
+  border-radius: var(--uk-radius-md);
+  box-shadow: var(--uk-shadow-lg);
+  padding: var(--uk-spacing-1) 0;
+  margin: 0;
+  list-style: none;
+  z-index: 100;
+  outline: none;
+}
+
+.option {
+  padding: var(--uk-spacing-2) var(--uk-spacing-3);
+  font-size: var(--uk-font-size-md);
+  color: var(--uk-color-text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.option.focused {
+  background-color: var(--uk-color-primary-50);
+  color: var(--uk-color-primary-700);
+}
+
+.option.selected {
+  font-weight: var(--uk-font-weight-semibold);
+  background-color: var(--uk-color-primary-100);
+  color: var(--uk-color-primary-700);
+}
+
+.disabledOption {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.errorText {
+  font-size: var(--uk-font-size-sm);
+  color: var(--uk-color-danger-600);
+}
