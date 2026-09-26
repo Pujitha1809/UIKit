@@ -10,7 +10,6 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     children: { control: false },
-    style: { control: false },
   },
 } satisfies Meta<typeof Modal>;
 
